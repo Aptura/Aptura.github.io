@@ -4,6 +4,7 @@ const images = [
   "./assets/img/64cd4d0d89236fc80a3395b4_runner.png",
   "./assets/img/64cd4d0257f3906c2314e093_roboto.png",
   "./assets/img/64d18f22bd4dfae30b7ea399_astro.png",
+  "./assets/img/64d190d6faa5e45333b85ae6_pacheco.png",
   // Ajoutez d'autres chemins d'images au besoin
 ];
 
