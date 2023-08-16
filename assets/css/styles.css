@@ -7,9 +7,9 @@
 #top-left-paragraph {
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 250px;
     font-size: 300%;
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
@@ -40,19 +40,20 @@ section p {
 
 /* Centrage des éléments principaux avec une largeur maximale de 800px */
 header, main, footer {
-    max-width: 800px;
+    max-width: 630px;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Augmente la taille de police du contenu principal */
 main {
-    font-size: 140%; /* Augmentation de la taille de police de 30% */
+    font-size: 140%;
 }
 
 h1 {
     margin-bottom: 0;
-    font-size: 210%;
+    font-size: 220%;
+    font-weight: bold;
 }
 
 /* Style pour le pied de page */
@@ -61,9 +62,9 @@ h1 {
     text-align: center;
     position: relative;
     width: 100%;
-    padding: 30px 0; /* Espacement du contenu du pied de page */
+    padding: 60px 0; 
     overflow: hidden; /* Empêche le contenu de dépasser le pied de page */
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 /* Pseudo-élément pour le fond noir */
@@ -85,7 +86,7 @@ h1 {
 
 /* Effet de survol pour le lien dans le pied de page */
 .footer-content a:hover {
-    color: #ff7b00; /* Couleur orange pour le survol */
+    color: #ff7b00; 
 }
 
 .footer-content a {
@@ -110,7 +111,7 @@ h1 {
 }
 
 .image-container img {
-    max-width: 60%; /* L'image s'ajuste automatiquement à la largeur du conteneur */
+    max-width: 65%; /* L'image s'ajuste automatiquement à la largeur du conteneur */
     height: auto; /* Garantit que l'aspect ratio est conservé */
 }
 
@@ -135,7 +136,7 @@ ul.menu {
 }
 
 .menu a {
-    font-weight: bold; /* Texte en gras */
+    font-weight: bold;
     text-decoration: none;
     color: #333;
     transition: color 0.3s; /* Transition de couleur lors du survol */
@@ -143,5 +144,5 @@ ul.menu {
 
 /* Effet de survol */
 .menu a:hover {
-    color: #ff7b00; /* Couleur orange pour le survol */
+    color: #ff7b00;
 }
