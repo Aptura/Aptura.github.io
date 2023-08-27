@@ -8,7 +8,7 @@
     position: absolute;
     top: 0;
     left: 250px;
-    font-size: 300%;
+    font-size: 260%;
     font-weight: bold;
     text-decoration: none;
     color: #333;
@@ -25,7 +25,6 @@ body, html {
     font-family: Arial, sans-serif;
     width: 100%;
     overflow-x: hidden; /* Empêche le défilement horizontal si le contenu dépasse */
-    font-family: "Pleasewritemeasong";
 }
 
 section {
@@ -36,24 +35,27 @@ section p {
     margin-top: 15px;
     margin-bottom: 0;
     text-align: justify;
+    font-family: Verdana;
 }
 
 /* Centrage des éléments principaux avec une largeur maximale de 800px */
 header, main, footer {
-    max-width: 630px;
+    max-width: 730px;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Augmente la taille de police du contenu principal */
 main {
-    font-size: 140%;
+    padding: 0 100px;
+    font-size: 115%;
 }
 
-h1 {
+h1, h2{
     margin-bottom: 0;
     font-size: 220%;
     font-weight: bold;
+    font-family: "Pleasewritemeasong";
 }
 
 /* Style pour le pied de page */
@@ -120,8 +122,8 @@ h1 {
     top: 20px;
     right: 125px;
     list-style: none;
-    font-size: 170%;
-    border: 2px solid #000;
+    font-size: 140%;
+    border: 1px solid #000;
     border-radius: .333em;
 }
 
@@ -145,4 +147,15 @@ ul.menu {
 /* Effet de survol */
 .menu a:hover {
     color: #ff7b00;
+}
+
+a:hover {
+    color: #ff7b00;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #583a31;
+    transition: color 0.3s;
 }
