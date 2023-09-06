@@ -7,7 +7,7 @@
 #top-left-paragraph {
     position: absolute;
     top: 0;
-    left: 250px;
+    right: 200px;
     font-size: 260%;
     font-weight: bold;
     text-decoration: none;
@@ -120,34 +120,34 @@ h1, h2{
 .menu {
     position: absolute;
     top: 20px;
-    right: 125px;
+    left: 70px;
     list-style: none;
     font-size: 140%;
     /* border: 1px solid #000; */
     /* border-radius: .333em; */
-}
-
-.menu li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-ul.menu {
+  }
+  
+  .menu li {
+    margin-bottom: 10px; /* Espacement vertical entre les éléments du menu */
+  }
+  
+  ul.menu {
     padding-left: 0;
     padding-right: 18px;
-}
-
-.menu a {
+  }
+  
+  .menu a {
     font-weight: bold;
     text-decoration: none;
     color: #333;
     transition: color 0.3s; /* Transition de couleur lors du survol */
-}
-
-/* Effet de survol */
-.menu a:hover {
+    display: block; /* Afficher les liens en tant que bloc pour une disposition verticale */
+  }
+  
+  /* Effet de survol */
+  .menu a:hover {
     color: #ff7b00;
-}
+  }
 
 a:hover {
     color: #ff7b00;
