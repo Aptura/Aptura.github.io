@@ -123,8 +123,8 @@ h1, h2{
     right: 125px;
     list-style: none;
     font-size: 140%;
-    border: 1px solid #000;
-    border-radius: .333em;
+    /* border: 1px solid #000; */
+    /* border-radius: .333em; */
 }
 
 .menu li {
