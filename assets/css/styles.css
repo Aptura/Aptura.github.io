@@ -1,6 +1,7 @@
+/* Polices */
 @font-face {
-    font-family: 'Pleasewritemeasong'; /* Nom de la police personnalisée */
-    src: url('../font/Pleasewritemeasong.ttf') format('truetype'); /* Chemin vers la version TrueType de la police */
+    font-family: 'Pleasewritemeasong';
+    src: url('../font/Pleasewritemeasong.ttf') format('truetype');
 }
 
 /* Positionnement du paragraphe en haut à gauche */
@@ -19,14 +20,16 @@
     color: #ff7b00;
 }
 
+/* Réinitialisation des styles de base */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     width: 100%;
-    overflow-x: hidden; /* Empêche le défilement horizontal si le contenu dépasse */
+    overflow-x: hidden;
 }
 
+/* Styles de la section principale */
 section {
     font-family: "Roboto", Arial;
 }
@@ -38,38 +41,37 @@ section p {
     font-family: Verdana;
 }
 
-/* Centrage des éléments principaux avec une largeur maximale de 800px */
+/* Mise en page générale avec une largeur maximale de 730px */
 header, main, footer {
     max-width: 730px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Augmente la taille de police du contenu principal */
+/* Styles pour la section principale */
 main {
     padding: 0 100px;
     font-size: 115%;
 }
 
-h1, h2{
+h1, h2 {
     margin-bottom: 0;
     font-size: 220%;
     font-weight: bold;
     font-family: "Pleasewritemeasong";
 }
 
-/* Style pour le pied de page */
+/* Styles pour le pied de page */
 .footer {
     color: white;
     text-align: center;
     position: relative;
     width: 100%;
-    padding: 60px 0; 
-    overflow: hidden; /* Empêche le contenu de dépasser le pied de page */
+    padding: 60px 0;
+    overflow: hidden;
     margin-top: 100px;
 }
 
-/* Pseudo-élément pour le fond noir */
 .footer::before {
     content: '';
     position: absolute;
@@ -86,18 +88,18 @@ h1, h2{
     font-family: "Roboto", Arial;
 }
 
-/* Effet de survol pour le lien dans le pied de page */
+/* Effet de survol pour les liens du pied de page */
 .footer-content a:hover {
-    color: #ff7b00; 
+    color: #ff7b00;
 }
 
 .footer-content a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s; /* Transition de couleur lors du survol */
+    transition: color 0.3s;
 }
 
-/* Media Query pour les écrans plus petits */
+/* Styles pour les écrans plus petits */
 @media (max-width: 768px) {
     header, main, footer {
         padding: 10px;
@@ -108,71 +110,72 @@ h1, h2{
     }
 }
 
+/* Styles pour le conteneur d'images */
 .image-container {
     text-align: center;
 }
 
 .image-container img {
-    max-width: 65%; /* L'image s'ajuste automatiquement à la largeur du conteneur */
-    height: auto; /* Garantit que l'aspect ratio est conservé */
+    max-width: 65%;
+    height: auto;
 }
 
+/* Styles pour le menu */
 .menu {
     position: absolute;
     top: 20px;
     left: 70px;
     list-style: none;
     font-size: 140%;
-    /* border: 1px solid #000; */
-    /* border-radius: .333em; */
-  }
-  
-  .menu li {
-    margin-bottom: 10px; /* Espacement vertical entre les éléments du menu */
-  }
-  
-  ul.menu {
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+ul.menu {
     padding-left: 0;
     padding-right: 18px;
-  }
-  
-  .menu a {
+}
+
+.menu a {
     font-weight: bold;
     text-decoration: none;
     color: #333;
-    transition: color 0.3s; /* Transition de couleur lors du survol */
-    display: block; /* Afficher les liens en tant que bloc pour une disposition verticale */
-  }
-  
-  /* Effet de survol */
-  .menu a:hover {
-    color: #ff7b00;
-  }
+    transition: color 0.3s;
+    display: block;
+}
 
+/* Effet de survol pour les liens du menu */
+.menu a:hover {
+    color: #ff7b00;
+}
+
+/* Styles pour les liens */
 a:hover {
     color: #ff7b00;
 }
 
-a{
+a {
     font-weight: bold;
     text-decoration: none;
     color: #583a31;
     transition: color 0.3s;
 }
 
+/* Styles pour le calendrier */
 .calendar-container {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    min-height: 100vh; /* Au lieu de height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .calendar {
-    padding: 30px; /* Augmentez la marge intérieure pour plus d'espace */
-    max-width: calc(100% - 40px); /* Largeur maximale ajustée en fonction de la marge intérieure */
-    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    padding: 30px;
+    max-width: calc(100% - 40px);
+    overflow-x: auto;
 }
-
 
 .row {
     display: flex;
@@ -185,26 +188,25 @@ a{
     border-radius: 50%;
     border: 1px solid #000;
     display: inline-block;
-    margin: 2px; /* Réduit l'espace entre les cercles */
+    margin: 2px;
 }
 
 .circle.filled {
-    background-color: #000; /* Couleur des cases remplies */
+    background-color: #000;
     color: #fff;
 }
 
-/* Ajoute de l'espace au milieu du calendrier */
+/* Espace ajouté au milieu du calendrier */
 .row:nth-child(26)::after {
     content: '';
     display: block;
-    height: 10px; /* Ajustez la hauteur selon vos préférences */
+    height: 10px;
 }
 
 .line-number {
-    font-size: 12px; /* Réglez la taille de police souhaitée */
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  
+}

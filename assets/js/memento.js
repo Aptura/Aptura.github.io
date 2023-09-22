@@ -1,5 +1,4 @@
 function updateCalendar() {
-  // Date de départ : 18 janvier 1998
   const startDate = new Date("1998-01-18");
   const currentDate = new Date();
   const millisecondsInWeek = 7 * 24 * 60 * 60 * 1000;
@@ -13,8 +12,6 @@ function updateCalendar() {
 
     for (let week = 0; week < 52; week++) {
       const circleElement = document.createElement("div");
-
-      // Applique la classe 'circle' pour les cercles
       circleElement.className = "circle";
 
       // Calcule la date de la semaine actuelle
@@ -45,7 +42,6 @@ function updateCalendar() {
   }
 }
 
-// Fonction pour vérifier si deux dates sont dans la même semaine
 function isSameWeek(date1, date2) {
   const oneWeekMilliseconds = 7 * 24 * 60 * 60 * 1000;
   const diff = Math.abs(date1 - date2);
