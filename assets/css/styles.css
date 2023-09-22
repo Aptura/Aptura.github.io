@@ -159,3 +159,52 @@ a{
     color: #583a31;
     transition: color 0.3s;
 }
+
+.calendar-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh; /* Au lieu de height: 100vh; */
+}
+
+.calendar {
+    padding: 30px; /* Augmentez la marge intérieure pour plus d'espace */
+    max-width: calc(100% - 40px); /* Largeur maximale ajustée en fonction de la marge intérieure */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 2px; /* Réduit l'espace entre les cercles */
+}
+
+.circle.filled {
+    background-color: #000; /* Couleur des cases remplies */
+    color: #fff;
+}
+
+/* Ajoute de l'espace au milieu du calendrier */
+.row:nth-child(26)::after {
+    content: '';
+    display: block;
+    height: 10px; /* Ajustez la hauteur selon vos préférences */
+}
+
+.line-number {
+    font-size: 12px; /* Réglez la taille de police souhaitée */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
