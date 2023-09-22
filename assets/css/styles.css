@@ -4,22 +4,6 @@
     src: url('../font/Pleasewritemeasong.ttf') format('truetype');
 }
 
-/* Positionnement du paragraphe en haut à gauche */
-#top-left-paragraph {
-    position: absolute;
-    top: 0;
-    right: 200px;
-    font-size: 260%;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-#top-left-paragraph:hover {
-    color: #ff7b00;
-}
-
 /* Réinitialisation des styles de base */
 body, html {
     margin: 0;
