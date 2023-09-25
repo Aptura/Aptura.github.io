@@ -13,6 +13,12 @@ body, html {
     overflow-x: hidden;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
 /* Styles de la section principale */
 section {
     font-family: "Roboto", Arial;
@@ -53,11 +59,14 @@ h1, h2 {
 .footer {
     color: white;
     text-align: center;
-    position: relative;
+    position: sticky; /* Modifiez la position en "sticky" */
+    bottom: 0; /* Fixez le pied de page en bas de la page */
     width: 100%;
     padding: 60px 0;
     overflow: hidden;
     margin-top: 100px;
+    background-color: #000000;
+    z-index: 2; /* Assurez-vous que le pied de page est au-dessus du contenu */
 }
 
 .footer::before {
