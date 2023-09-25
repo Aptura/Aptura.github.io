@@ -19,10 +19,13 @@ section {
 }
 
 section p {
-    margin-top: 15px;
-    margin-bottom: 0;
+    margin-top: 0px;
     text-align: justify;
     font-family: Verdana;
+}
+
+p {
+    margin-bottom: 25px;
 }
 
 /* Mise en page générale avec une largeur maximale de 730px */
@@ -39,7 +42,8 @@ main {
 }
 
 h1, h2 {
-    margin-bottom: 0;
+    margin-bottom: 15px;
+    margin-top: 0;
     font-size: 220%;
     font-weight: bold;
     font-family: "Pleasewritemeasong";
@@ -92,6 +96,14 @@ h1, h2 {
     .footer-content {
         flex-direction: column;
     }
+    .footer ~ p{
+        max-width: 100%;
+        text-align: inherit;
+        
+    }
+    .menu-button {
+        display: block;
+    }
 }
 
 /* Styles pour le conteneur d'images */
@@ -108,9 +120,30 @@ h1, h2 {
 .menu {
     position: absolute;
     top: 20px;
-    left: 70px;
+    left: 50px;
     list-style: none;
     font-size: 140%;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    outline: none; /* Supprime la bordure focus par défaut */
+    cursor: pointer;
+    position: fixed; /* Le bouton sera positionné de manière fixe */
+    top: 10px; /* Distance depuis le haut de la page */
+    left: 10px; /* Distance depuis la gauche de la page */
+    z-index: 1000; /* Pour s'assurer que le bouton est au-dessus du contenu */
+    font-size: 150%; /* Augmente la taille de police de 50% */
+    transition: transform 0.3s; /* Ajoute une transition pour l'effet "déployé" */
+}
+
+.menu-button:hover {
+    transform: scale(1.2); /* Applique une échelle de 1.2 lorsqu'il est survolé */
+}
+
+.menu-dropdown {
+    display: none;
 }
 
 .menu li {

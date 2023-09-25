@@ -29,3 +29,14 @@ const imagePath = `./assets/img/${images[randomIndex]}`;
 
 // Change la source de l'image pour afficher une image aléatoire
 randomImage.src = imagePath;
+
+// Sélectionnez les éléments du DOM nécessaires
+const menuButton = document.getElementById("menu-toggle");
+const menuDropdown = document.getElementById("menu-dropdown");
+
+// Ajoutez un gestionnaire d'événement au bouton de menu
+menuButton.addEventListener("click", () => {
+  // Basculez la visibilité du menu déroulant
+  menuDropdown.style.display =
+    menuDropdown.style.display === "block" ? "none" : "block";
+});
