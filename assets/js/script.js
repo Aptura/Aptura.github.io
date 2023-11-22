@@ -1,20 +1,6 @@
 // Liste des chemins vers les images
 const images = [
-  "64cd4aba2a4c88ee00b532c5_bueno.png",
-  "64cd4d0d89236fc80a3395b4_runner.png",
-  "64cd4d0257f3906c2314e093_roboto.png",
-  "64d18f22bd4dfae30b7ea399_astro.png",
-  "64d190d6faa5e45333b85ae6_pacheco.png",
-  "new-beginnings.png",
-  "pilot.png",
-  "plants.png",
-  "puppy.png",
-  "reflecting.png",
-  "rogue.png",
-  "whoa.png",
-  "coffee.png",
-  "kiddo.png",
-  "late-for-class.png",
+  "_c50840c5-6acb-4ee7-96c1-1cd0ac3808a2.jpg",
   // Ajoutez d'autres chemins d'images au besoin
 ];
 

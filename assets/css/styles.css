@@ -11,6 +11,7 @@ body, html {
     font-family: Arial, sans-serif;
     width: 100%;
     overflow-x: hidden;
+    background-color: #FBFBFB;
 }
 
 .wrapper {
@@ -57,7 +58,7 @@ h1, h2 {
 
 /* Styles pour le pied de page */
 .footer {
-    color: white;
+    color: #FBFBFB;
     text-align: center;
     position: sticky; /* Modifiez la position en "sticky" */
     bottom: 0; /* Fixez le pied de page en bas de la page */
@@ -92,7 +93,7 @@ h1, h2 {
 
 .footer-content a {
     text-decoration: none;
-    color: #fff;
+    color: #FBFBFB;
     transition: color 0.3s;
 }
 
@@ -219,7 +220,7 @@ a {
 
 .circle.filled {
     background-color: #000;
-    color: #fff;
+    color: #FBFBFB;
 }
 
 /* Espace ajouté au milieu du calendrier */
