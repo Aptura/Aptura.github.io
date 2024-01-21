@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Aptura </title>
 </head>
+
 <body>
     <header>
         <nav id="menu-dropdown" class="menu-dropdown">
@@ -14,7 +16,7 @@
                 <li><a href="https://aptura.link/">Accueil</a></li>
                 <li><a href="https://link.aptura.link/" target="_blank">Mes Réseaux</a></li>
                 <li><a href="https://aptura.link/anonymat.html">Anonymat</a></li>
-                <li><a href="https://up.aptura.link/status/main" target="_blank">Services</a></li>
+                <li><a href="https://up.aptura.link/status/main" target="_blank">Status Infra</a></li>
                 <li><a href="https://github.com/Aptura" target="_blank">Github</a></li>
                 <li><a href="mailto:contact@aptura.link" target="_blank">Contact</a></li>
             </ul>
@@ -25,62 +27,136 @@
         <br>
         <h1>Guide de l'anonymat 👻</h1>
         <section>
-            <p>Avant de commencer à explorer chaque niveaux, la première étape est de prendre conscience des données personnelles que nous partageons publiquement sur internet que ce soit sur facebook, twitter, instagram et autres ainsi qu'avec les entreprises que je viens de citer, j'entends par là, l'exposition aux utilisateurs, mais aussi avec ceux qui contrôlent les société sur lesquelles nous partageons nos données.</p>
+            <p>Avant de commencer à explorer chaque niveaux, la première étape est de prendre conscience des données
+                personnelles que nous partageons publiquement sur internet que ce soit sur facebook, twitter, instagram
+                et autres ainsi qu'avec les entreprises que je viens de citer, j'entends par là, l'exposition aux
+                utilisateurs, mais aussi avec ceux qui contrôlent les société sur lesquelles nous partageons nos
+                données.</p>
             <h2>Niveau 1 : Devenir difficile à pirater.</h2>
-                <p>Etape 1 - Les mots de passe</p>
-                <p>Aujourd'hui la puissance des ordinateurs est vraiment considérable. Pour comprendre rapidement, les mots de passe que vous entrez passe par une fonction de hashage. Voici un exemple :</p>
-                <p>aptura.link une fois "hashé" en SHA3-512 donne ceci -> 0194cc945acf9ff9bd7e2485a48349ffce4e3cf13520cb38e8fbb<br>85fd1a9c6569518ee808a87dda83f0fbf35786e705f5fc30b493<br>4bddea95832dae51b4a2b46</p>
-                <p>C'est une empreinte représentant le texte. </p>
-                <p>Vos mots de passe ne sont pas écrits en clair dans les bases de données qui peuvent être volés par un tier. C'est ici que prend tout l'intérêt du hashage, car les sites où vous êtes inscrit garde en base de données le hash de votre mot de passe et une comparaison de hash sera faite lors d'une tentative de connexion !</p>
-                <p>Donc, en gros plus votre mot de passe est long, plus il contient de symboles spéciaux et de chiffre, plus il est difficile de trouver le hash. Pourquoi cela est plus difficile ?</p>
-                <p>Aujourd'hui il faudrais environ 10^143 ans pour calculer seulement toutes les possibilités d'input minimales (< 512 bits) en supposant que vous puissiez caluler le hash d'un block toutes les 1ms. (merci Axone). Cependant si votre mot de passe est "p@$$w0rd" il est très probable qu'il figure dans un dictionnaire de hash. C'est aujourd'hui le risque le plus courant pour que votre mot de passe soit découvert par un pirate. Plus votre mot de passe est long, complexe et personnalisé, moins il y a de chance que son hash se retrouve dans un dictionnaire !</p>
-                <p>Donc, si votre mot de passe ressemble à BonjoVrMoic'3st4ptVra (BonjourMoic'estAptura) cela compliquera la tâche. Je vais maintenant vous expliquer pourquoi la version entre parenthèse est très différente de la version complexe. Vous constatez que des symboles remplacent des lettres bien particulières. Mon but était d'avoir une phrase que je n'oublierais pas, mais qui reste complexe dans l'optique de la retenir. Pour cela je me base sur des règles définies à l'avance.</p>
-                <p>Par exemple dans mon cas le "A" devient un "4", le "u" devient un "V" etc. Cela me permet grâce à ces règle d'avoir un mot de passe complexe, long, mais que je peux retenir !</p>
-                <p>Bravo, vous venez de créer votre langage crypté !</p>
-                <p>Attention toutefois, l'origine de ceci vient du <a href="https://fr.wikipedia.org/wiki/Leet_speak" target="_blank">L33T</a>, je vous laisse regarder l'article wikipédia en cliquant sur "L33T". Si je me permets de vous avertir à ce sujet c'est parce que les pirates aussi connaissent cela. Donc, il faut garder en tête qu'il est plus intéressant de créer ses propres règles et je dirais même son propre L33T speak !</p>
-                <p>Heureusement, j'ai mis en place un script NodeJS sur github pour le faire automatiquement, ce n'est pas destiné à tout le monde, car les règles doivent être modifiés dans le code, ce qui implique d'avoir connaissance de ce que l'on modifie, je vous rassure ce n'est pas très complexe en réalité et cela est une bonne occasion de mettre les mains dans le code ! (en plus j'ai commenté le code pour que vous puissiez modifier le nécessaire)</p>
-                <p>Voici le projet -> <a href="https://github.com/Aptura/PasswordRuleChangeCharacter" target="_blank">PasswordRuleChangeCharacter</a></p>
-                <p>Vous me direz aussi "Oui mais comment je retiens un mot de passe aussi complexe si je dois en avoir un différent pour chaque site !" et à cela je vous répondrais deux points assez simple !</p>
-                <ol>
-                    <li>Soit vous faites confiance à un gestionnaire de mot de passe (Comme <a href="https://pr.tn/ref/KJVF9JZ508KG" target="_blank">Proton</a>, Keypass, Bitwarden, Dashlane ...)</li>
-                    <li>Soit vous écrivez sur un papier le mot de passe original sans modification (sur papier, note de téléphone et autres)</li>
-                </ol>
-                <p>Pour le deuxième choix, il y a une autre possibilité, comme stocker un mot clé de cette phrase par exemple si votre mot de passe est "ItsTheFinalCountdown" vous pouvez noter simplement "Countdown".</p>
-                <p>Aussi, pensez à activer la double authentification quand cela est possible. Ne sauvegardez pas vos mot de passe dans le navigateur (je sais c'est pratique mais comporte un risque non  négligeable), sauvegardez aussi vos codes de réccupération en sûreté. Et bien sûr, changer de mot de passe au moins une fois par an et ne réutilisez pas un mot de passe !</p>
-                <p>En conclusion, la première étape est de rendre difficile le piratage de vos comptes en ligne, car comme bien souvent, les utilisateurs utilisent une seule adresses mail pour toute leur vie sur internet, ce qui implique que si votre boîte mail est piraté, tous vos comptes le sont potentiellement. Un mot de passe fort est le plus souvent une phrase d'au moins 25 caractères, que vous n'oublierez pas, avec des règles précises que vous n'oublierez pas non plus et qui change l'apparence de votre phrase en remplaçant certains caractères par d'autres !</p>
-                <br>
-                <p>Etape 2 - Arrêtez de partager trop d'informations</p>
-                <p>Je dois l'avouer d'avance cette étape sera relativement rapide. En fait, ce n'es pas très compliqué, par exemple, quand vous commandez sur Amazon, vous donnez généralement votre adresse de domicile, en même temps, qui suis-je pour vous blâmer ? C'est quand même plus sympa d'être livré sur le pas de la porte non ?</p>
-                <p>Sauf que, si une fuite de données survient, votre nom, prénom et adresse peuvent se retrouver en ligne accessible à tous. C'est tout de suite plus embêtant. Beaucoup me dirons que cela ne craint rien car qui viendrai taper à votre porte ? Certes, il est probable que rien n'arrive, mais n'oublions pas une chose importante, c'est le genre d'information qu'internet n'a pas besoin de connaître !</p>
-                <p>C'est d'ailleurs une porte d'entrée à la réception de courrier frauduleux, c'est l'invitation aux faux policier chez votre grand-mère pour lui dérober des bijoux de famille ! Mais je pense que le pire c'est pour les arnaques téléphoniques, car, toute informations vous concernant peut servir à l'arnaqueur qui tentera de vous avoir vous ou quelqu'un de votre entourage !</p>
-                <p>Oui je sais, ça fait paranoïaque, mais demandez plutôt aux personnes ayant déjà eu ce genre de mésaventure !</p>
-                <p>Pour revenir à Amazon, pourquoi ne pas simplement donner un point relais ? Opter pour une boîte postale ? Sur le site de votre jeu vidéo préféré, pourquoi ne pas plutôt entrer un faux nom et une fausse adresse ?</p>
-                <p>Je vous laisse réfléchir à cela car c'est un sujet qui dépend de chacun et de ce qu'il est prêt à modifier pour gagner en tranquillité.</p>
-                <br>
-                <p>Etape 3 - Créer différents mail</p>
-                <p>"Aptura tu es vraiment chiant, tu me demandes de créer 4 mail différent et donc d'avoir quatre mots de passe pour chacun d'eux ?"</p>
-                <p>Oui malheureusement pour vous ! Quoi de plus agaçants que d'avoir ses mails professionnels sur une boîte mail saturé de spam et de publicité parce que vous l'utilisez aussi pour d'autre utilité comme commander sur internent, vos réseaux sociaux, les sites un peu plus douteux ...</p>
-                <p>Oui c'est agaçant, mais si votre boîte mail pour vos réseaux sociaux, votre boîte mail ne subira pas les conséquences. C'est aussi un moyen de préserver une certaine stabilité dans votre vie et d'éviter de céder à la panique trop facilement.</p>
-                <p>Dernière chose, inscrivez vos mail dans aux alertes de fuite de données tel que : <a href="https://monitor.firefox.com/" target="_blank">Firefox Monitor</a>, <a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a> ...</p>
-                <p>Vous me remercierez plus tard.</p>
-                <h3>Pour aller plus loin je conseille de consulter <a href="https://security-list.js.org/#/README" target="_blank">> cette page <</a> qui est riche d'information.</h3>
-                <p>Voici d'autres liens utiles :</p>
-                <ol>
-                    <li><a href="https://github.com/tycrek/degoogle" target="_blank">degoogle</a></li>
-                    <li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">Awesome Selfhosted</a></li>
-                    <li><a href="https://github.com/awesome-foss/awesome-sysadmin" target="_blank">Awesome Sysadmin</a></li>
-                    <li><a href="https://github.com/mikeroyal/Self-Hosting-Guide" target="_blank">Self Hosting Guide</a></li>
-                </ol>
+            <p>Etape 1 - Les mots de passe</p>
+            <p>Aujourd'hui la puissance des ordinateurs est vraiment considérable. Pour comprendre rapidement, les mots
+                de passe que vous entrez passe par une fonction de hashage. Voici un exemple :</p>
+            <p>aptura.link une fois "hashé" en SHA3-512 donne ceci ->
+                0194cc945acf9ff9bd7e2485a48349ffce4e3cf13520cb38e8fbb<br>85fd1a9c6569518ee808a87dda83f0fbf35786e705f5fc30b493<br>4bddea95832dae51b4a2b46
+            </p>
+            <p>C'est une empreinte représentant le texte. </p>
+            <p>Vos mots de passe ne sont pas écrits en clair dans les bases de données qui peuvent être volés par un
+                tier. C'est ici que prend tout l'intérêt du hashage, car les sites où vous êtes inscrit garde en base de
+                données le hash de votre mot de passe et une comparaison de hash sera faite lors d'une tentative de
+                connexion !</p>
+            <p>Donc, en gros plus votre mot de passe est long, plus il contient de symboles spéciaux et de chiffre, plus
+                il est difficile de trouver le hash. Pourquoi cela est plus difficile ?</p>
+            <p>Aujourd'hui il faudrais environ 10^143 ans pour calculer seulement toutes les possibilités d'input
+                minimales (< 512 bits) en supposant que vous puissiez caluler le hash d'un block toutes les 1ms. (merci
+                    Axone). Cependant si votre mot de passe est "p@$$w0rd" il est très probable qu'il figure dans un
+                    dictionnaire de hash. C'est aujourd'hui le risque le plus courant pour que votre mot de passe soit
+                    découvert par un pirate. Plus votre mot de passe est long, complexe et personnalisé, moins il y a de
+                    chance que son hash se retrouve dans un dictionnaire !</p>
+                    <p>Donc, si votre mot de passe ressemble à BonjoVrMoic'3st4ptVra (BonjourMoic'estAptura) cela
+                        compliquera la tâche. Je vais maintenant vous expliquer pourquoi la version entre parenthèse est
+                        très différente de la version complexe. Vous constatez que des symboles remplacent des lettres
+                        bien particulières. Mon but était d'avoir une phrase que je n'oublierais pas, mais qui reste
+                        complexe dans l'optique de la retenir. Pour cela je me base sur des règles définies à l'avance.
+                    </p>
+                    <p>Par exemple dans mon cas le "A" devient un "4", le "u" devient un "V" etc. Cela me permet grâce à
+                        ces règle d'avoir un mot de passe complexe, long, mais que je peux retenir !</p>
+                    <p>Bravo, vous venez de créer votre langage crypté !</p>
+                    <p>Attention toutefois, l'origine de ceci vient du <a
+                            href="https://fr.wikipedia.org/wiki/Leet_speak" target="_blank">L33T</a>, je vous laisse
+                        regarder l'article wikipédia en cliquant sur "L33T". Si je me permets de vous avertir à ce sujet
+                        c'est parce que les pirates aussi connaissent cela. Donc, il faut garder en tête qu'il est plus
+                        intéressant de créer ses propres règles et je dirais même son propre L33T speak !</p>
+                    <p>Heureusement, j'ai mis en place un script NodeJS sur github pour le faire automatiquement, ce
+                        n'est pas destiné à tout le monde, car les règles doivent être modifiés dans le code, ce qui
+                        implique d'avoir connaissance de ce que l'on modifie, je vous rassure ce n'est pas très complexe
+                        en réalité et cela est une bonne occasion de mettre les mains dans le code ! (en plus j'ai
+                        commenté le code pour que vous puissiez modifier le nécessaire)</p>
+                    <p>Voici le projet -> <a href="https://github.com/Aptura/PasswordRuleChangeCharacter"
+                            target="_blank">PasswordRuleChangeCharacter</a></p>
+                    <p>Vous me direz aussi "Oui mais comment je retiens un mot de passe aussi complexe si je dois en
+                        avoir un différent pour chaque site !" et à cela je vous répondrais deux points assez simple !
+                    </p>
+                    <ol>
+                        <li>Soit vous faites confiance à un gestionnaire de mot de passe (Comme <a
+                                href="https://pr.tn/ref/KJVF9JZ508KG" target="_blank">Proton</a>, Keypass, Bitwarden,
+                            Dashlane ...)</li>
+                        <li>Soit vous écrivez sur un papier le mot de passe original sans modification (sur papier, note
+                            de téléphone et autres)</li>
+                    </ol>
+                    <p>Pour le deuxième choix, il y a une autre possibilité, comme stocker un mot clé de cette phrase
+                        par exemple si votre mot de passe est "ItsTheFinalCountdown" vous pouvez noter simplement
+                        "Countdown".</p>
+                    <p>Aussi, pensez à activer la double authentification quand cela est possible. Ne sauvegardez pas
+                        vos mot de passe dans le navigateur (je sais c'est pratique mais comporte un risque non
+                        négligeable), sauvegardez aussi vos codes de réccupération en sûreté. Et bien sûr, changer de
+                        mot de passe au moins une fois par an et ne réutilisez pas un mot de passe !</p>
+                    <p>En conclusion, la première étape est de rendre difficile le piratage de vos comptes en ligne, car
+                        comme bien souvent, les utilisateurs utilisent une seule adresses mail pour toute leur vie sur
+                        internet, ce qui implique que si votre boîte mail est piraté, tous vos comptes le sont
+                        potentiellement. Un mot de passe fort est le plus souvent une phrase d'au moins 25 caractères,
+                        que vous n'oublierez pas, avec des règles précises que vous n'oublierez pas non plus et qui
+                        change l'apparence de votre phrase en remplaçant certains caractères par d'autres !</p>
+                    <br>
+                    <p>Etape 2 - Arrêtez de partager trop d'informations</p>
+                    <p>Je dois l'avouer d'avance cette étape sera relativement rapide. En fait, ce n'es pas très
+                        compliqué, par exemple, quand vous commandez sur Amazon, vous donnez généralement votre adresse
+                        de domicile, en même temps, qui suis-je pour vous blâmer ? C'est quand même plus sympa d'être
+                        livré sur le pas de la porte non ?</p>
+                    <p>Sauf que, si une fuite de données survient, votre nom, prénom et adresse peuvent se retrouver en
+                        ligne accessible à tous. C'est tout de suite plus embêtant. Beaucoup me dirons que cela ne
+                        craint rien car qui viendrai taper à votre porte ? Certes, il est probable que rien n'arrive,
+                        mais n'oublions pas une chose importante, c'est le genre d'information qu'internet n'a pas
+                        besoin de connaître !</p>
+                    <p>C'est d'ailleurs une porte d'entrée à la réception de courrier frauduleux, c'est l'invitation aux
+                        faux policier chez votre grand-mère pour lui dérober des bijoux de famille ! Mais je pense que
+                        le pire c'est pour les arnaques téléphoniques, car, toute informations vous concernant peut
+                        servir à l'arnaqueur qui tentera de vous avoir vous ou quelqu'un de votre entourage !</p>
+                    <p>Oui je sais, ça fait paranoïaque, mais demandez plutôt aux personnes ayant déjà eu ce genre de
+                        mésaventure !</p>
+                    <p>Pour revenir à Amazon, pourquoi ne pas simplement donner un point relais ? Opter pour une boîte
+                        postale ? Sur le site de votre jeu vidéo préféré, pourquoi ne pas plutôt entrer un faux nom et
+                        une fausse adresse ?</p>
+                    <p>Je vous laisse réfléchir à cela car c'est un sujet qui dépend de chacun et de ce qu'il est prêt à
+                        modifier pour gagner en tranquillité.</p>
+                    <br>
+                    <p>Etape 3 - Créer différents mail</p>
+                    <p>"Aptura tu es vraiment chiant, tu me demandes de créer 4 mail différent et donc d'avoir quatre
+                        mots de passe pour chacun d'eux ?"</p>
+                    <p>Oui malheureusement pour vous ! Quoi de plus agaçants que d'avoir ses mails professionnels sur
+                        une boîte mail saturé de spam et de publicité parce que vous l'utilisez aussi pour d'autre
+                        utilité comme commander sur internent, vos réseaux sociaux, les sites un peu plus douteux ...
+                    </p>
+                    <p>Oui c'est agaçant, mais si votre boîte mail pour vos réseaux sociaux, votre boîte mail ne subira
+                        pas les conséquences. C'est aussi un moyen de préserver une certaine stabilité dans votre vie et
+                        d'éviter de céder à la panique trop facilement.</p>
+                    <p>Dernière chose, inscrivez vos mail dans aux alertes de fuite de données tel que : <a
+                            href="https://monitor.firefox.com/" target="_blank">Firefox Monitor</a>, <a
+                            href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a> ...</p>
+                    <p>Vous me remercierez plus tard.</p>
+                    <h3>Pour aller plus loin je conseille de consulter <a href="https://security-list.js.org/#/README"
+                            target="_blank">> cette page << /a> qui est riche d'information.</h3>
+                    <p>Voici d'autres liens utiles :</p>
+                    <ol>
+                        <li><a href="https://github.com/tycrek/degoogle" target="_blank">degoogle</a></li>
+                        <li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">Awesome
+                                Selfhosted</a></li>
+                        <li><a href="https://github.com/awesome-foss/awesome-sysadmin" target="_blank">Awesome
+                                Sysadmin</a></li>
+                        <li><a href="https://github.com/mikeroyal/Self-Hosting-Guide" target="_blank">Self Hosting
+                                Guide</a></li>
+                    </ol>
         </section>
     </main>
-    
+
     <div class="footer">
         <div class="footer-content">
             <p>©️ 2023 Aptura.</p>
-            <p>Donation in XMR : 48e3gMTRy3x4gqFeqsnbExCauerhtL21DhsznqGhrPv7KMQRxYAovk9PEV27UuScXEBaeb4GBDB2A9y8N9xSZ1mvLu3UrkA</p>
+            <p>Si vous souhaitez faire une donation, vous pouvez la faire en <a
+                    href="https://www.buymeacoffee.com/aptura" target="_blank">m'offrant un café !</a></p>
         </div>
     </div>
 </body>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/menu.js"></script>
+
 </html>
