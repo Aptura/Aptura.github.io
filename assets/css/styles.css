@@ -6,12 +6,15 @@
 
 /* Réinitialisation des styles de base */
 body, html {
+    background-image: url("../img/graphy.png");
+	background-repeat: repeat;
+	background-color: #c0c0c0;
+	background-size: default;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     width: 100%;
     overflow-x: hidden;
-    background-color: #FBFBFB;
 }
 
 .wrapper {
