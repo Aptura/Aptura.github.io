@@ -1,6 +1,6 @@
 // Liste des chemins vers les images
 const images = [
-  "protectedart.jpg",
+  "logo1.png",
   // Ajoutez d'autres chemins d'images au besoin
 ];
 
