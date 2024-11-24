@@ -1,7 +1,7 @@
 /* Polices */
 @font-face {
-    font-family: 'Minecraftia-Regular';
-    src: url('../font/Minecraftia-Regular.ttf') format('truetype');
+    font-family: 'alagard';
+    src: url('../font/alagard.ttf') format('truetype');
 }
 
 /* Réinitialisation des styles de base */
@@ -12,7 +12,7 @@ body, html {
 	background-size: default;
     margin: 0;
     padding: 0;
-    font-family: "Minecraftia-Regular", Arial, sans-serif;
+    font-family: "alagard", Arial, sans-serif;
     width: 100%;
     overflow-x: hidden;
 }
@@ -25,13 +25,13 @@ body, html {
 
 /* Styles de la section principale */
 section {
-    font-family: "Minecraftia-Regular", Arial;
+    font-family: "alagard", Arial;
 }
 
 section p {
     margin-top: 0px;
     text-align: justify;
-    font-family: "Minecraftia-Regular";
+    font-family: "alagard";
 }
 
 p {
@@ -56,7 +56,7 @@ h1, h2 {
     margin-top: 0;
     font-size: 220%;
     font-weight: bold;
-    font-family: "Minecraftia-Regular";
+    font-family: "alagard";
 }
 
 /* Styles pour le pied de page */
@@ -86,7 +86,7 @@ h1, h2 {
 
 .footer-content {
     align-items: center;
-    font-family: "Minecraftia-Regular", Arial;
+    font-family: "alagard", Arial;
 }
 
 /* Effet de survol pour les liens du pied de page */
