@@ -157,12 +157,12 @@ ul.menu {
 
 /* Effet de survol pour les liens du menu */
 .menu a:hover {
-    color: #ff7b00;
+    color: #327e62;
 }
 
 /* Styles pour les liens */
 a:hover {
-    color: #ff7b00;
+    color: #327e62;
 }
 
 a {
