@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptura - Site Personnel</title>
+    <meta name="description"
+        content="Découvrez le site personnel d'Aptura : un espace d'exploration pour partager des idées, des projets, et un peu de randomness.">
+    <meta name="author" content="Aptura">
+    <meta name="keywords" content="Aptura, site personnel, randomness, développeur, Discord, GitHub, contact">
+    <meta name="robots" content="index, follow">
     <link rel="shortcut icon" href="assets/img/logo1.png">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Aptura </title>
+    <!-- Balises Open Graph -->
+    <meta property="og:title" content="Aptura - Site Personnel">
+    <meta property="og:description"
+        content="Explorez le site personnel d'Aptura pour en savoir plus sur ses projets, ses réseaux sociaux et ses idées.">
+    <meta property="og:image" content="assets/img/logo1.png">
+    <meta property="og:url" content="https://aptura.link/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aptura - Site Personnel">
+    <meta name="twitter:description"
+        content="Explorez le site personnel d'Aptura pour en savoir plus sur ses projets, ses réseaux sociaux et ses idées.">
+    <meta name="twitter:image" content="assets/img/logo1.png">
 </head>
+
 <body>
     <header>
         <div class="image-container">
-            <img id="random-image" src="assets/img/logo1.png" alt="Image de profil" width="300">
+            <img id="random-image" src="assets/img/logo1.png" alt="Logo Aptura" width="300">
         </div>
-        <nav id="menu-dropdown" class="menu-dropdown">
-            <ul class="menu">
+        <!-- Bouton menu burger accessible sur tous les appareils -->
+        <div class="menu-button" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</div>
+        <nav id="menu" class="menu">
+            <ul>
                 <li><a href="https://aptura.link/">Accueil</a></li>
-                <li><a href="https://link.aptura.link/" target="_blank">Mes Réseaux</a></li>
-                <li><a href="https://github.com/Aptura" target="_blank">Github</a></li>
-                <li><a href="https://discord.gg/HTGgY383Fd" target="_blank">Discord</a></li>
-                <li><a href="mailto:contact@aptura.link" target="_blank">Contact</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">  ≧﹏≦</a></li>
+                <li><a href="https://link.aptura.link/" target="_blank" rel="noopener noreferrer">Mes Réseaux</a></li>
+                <li><a href="https://github.com/Aptura" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://discord.gg/HTGgY383Fd" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                <li><a href="mailto:contact@aptura.link" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
+                        ≧＿≦</a></li>
             </ul>
         </nav>
     </header>
     <main class="wrapper">
-        <h1>Bienvenue, <script>NekoType="ace"</script>
-<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
-href="https://webneko.net">Neko</a></h1></h1>
+        <h1>Bienvenue,
+            <script>NekoType = "ace"</script>
+            <h1 id=nl>
+                <script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a>
+            </h1>
+        </h1>
         <section>
             <p>
-                Moi c'est Aptura ! Tu es arrivé sur mon site personnel et je préfère te le dire en avance, si tu
-                regardes en profondeur, il est codé un peu de manière random et pas du tout responsive ! ´•ꞈ•`
-                <br><br>
-                Pour le moment ce site n'a pas de but précis. Si tu as des idées n'hésite pas a rejoindre
-                mon serveur discord et de me le faire savoir.
-                <br> <br>
-                Bref, bienvenue dans mon monde ! ↀᴥↀ 
+                Moi, c'est Aptura ! Bienvenue sur mon site personnel. Je préfère te prévenir, ce site est codé de façon
+                un peu aléatoire et il n'est pas encore totalement responsive. ´•⸈•`
+            </p>
+            <p>
+                Pour le moment, ce site n'a pas de but précis. Si tu as des idées, rejoins mon serveur Discord pour me
+                les partager.
+                Je suis ouvert à toute suggestion !
+            </p>
+            <p>
+                Bref, fais comme chez toi et explore mon univers ! ⇀ᴥ⇀
             </p>
         </section>
     </main>
@@ -46,6 +75,13 @@ href="https://webneko.net">Neko</a></h1></h1>
                     href="https://www.buymeacoffee.com/aptura" target="_blank">m'offrant un café !</a></p> -->
         </div>
     </div>
+    <!-- Script pour gérer l'ouverture et la fermeture du menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
 </body>
-<script src="assets/js/script.js"></script>
+
 </html>
