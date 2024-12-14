@@ -47,7 +47,6 @@ h1, h2 {
 }
 
 /* Styles pour le pied de page */
-/* Styles pour le pied de page */
 .footer {
     color: #FBFBFB;
     text-align: center;
@@ -88,7 +87,6 @@ h1, h2 {
     transition: color 0.3s;
 }
 
-
 /* Conteneur d'images */
 .image-container {
     text-align: center;
@@ -99,24 +97,25 @@ h1, h2 {
     height: auto;
 }
 
-/* Menu */
+/* Menu Burger */
 .menu-button {
-    background-color: #f3f3f3;
-    border-radius: 20%;
     display: block;
     font-size: 30px;
     cursor: pointer;
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 10;
+    z-index: 100; /* Assure-toi qu'il est au-dessus de tout autre élément */
+    width: 50px; /* Taille du bouton */
+    height: 50px; /* Taille du bouton */
+    padding: 10px; /* Pour garantir un espace autour de l'icône */
 }
 
+/* Menu */
 .menu {
-    display: none;
+    display: none; /* Cacher le menu par défaut sur mobile */
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
     color: #FFF;
     padding: 10px;
     position: fixed;
@@ -124,21 +123,15 @@ h1, h2 {
     left: 0;
     width: 200px;
     height: 100vh;
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Cacher le menu en dehors de l'écran */
     transition: transform 0.3s ease;
-    z-index: 9;
-    backdrop-filter: blur(2px);
+    z-index: 99; /* S'assurer que le menu est en dessous du bouton burger */
 }
 
-/* Menu ouvert au survol pour desktop */
-.menu-button:hover + .menu {
-    display: flex;
-    transform: translateX(0);
-}
-
-.menu:hover {
-    display: flex;
-    transform: translateX(0);
+/* Menu ouvert quand .open est ajouté */
+.menu.open {
+    display: flex; /* Afficher le menu lorsque l'on ajoute la classe "open" */
+    transform: translateX(0); /* Déplacer le menu dans l'écran */
 }
 
 .menu li {
@@ -149,7 +142,7 @@ h1, h2 {
 .menu a {
     font-size: 130%;
     text-decoration: none;
-    color: #FFF;
+    color: #000000;
     transition: color 0.3s;
     display: block;
 }
@@ -172,25 +165,31 @@ a:hover {
 
 /* Comportement pour les écrans mobiles */
 @media (max-width: 768px) {
-    header, main, footer {
-        padding: 10px;
+    /* Afficher le bouton menu uniquement sur mobile */
+    .menu-button {
+        display: block;  /* Afficher le bouton burger sur les petits écrans */
     }
 
-    .footer-content {
-        flex-direction: column;
-    }
-
+    /* Cacher le menu sur les écrans mobiles par défaut */
     .menu {
-        display: none;
+        display: none;  /* Cacher le menu burger par défaut */
     }
 
     .menu.open {
-        display: flex;
-        transform: translateX(0);
+        display: flex;  /* Afficher le menu lorsqu'il est ouvert */
+    }
+}
+
+/* Comportement pour les écrans de bureau */
+@media (min-width: 769px) {
+    /* Cacher le bouton menu sur les écrans de bureau */
+    .menu-button {
+        display: none;
     }
 
-    .menu-button:hover + .menu,
-    .menu:hover {
-        display: none;
+    /* Afficher le menu directement sur les écrans de bureau */
+    .menu {
+        display: flex;  /* Afficher le menu sur grand écran */
+        transform: translateX(0);  /* Le menu est déjà visible */
     }
 }

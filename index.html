@@ -72,10 +72,48 @@
     </div>
     <!-- Script pour gérer l'ouverture et la fermeture du menu -->
     <script>
+        // Fonction pour ouvrir ou fermer le menu
         function toggleMenu() {
             const menu = document.getElementById("menu");
-            menu.classList.toggle("open");
+            menu.classList.toggle("open");  // Ajoute ou enlève la classe "open"
         }
+
+        // Vérifier la taille de l'écran pour appliquer le comportement adéquat
+        function checkMenuBehavior() {
+            const menuButton = document.querySelector('.menu-button');
+            const menu = document.querySelector('.menu');
+
+            // Sur mobile (moins de 768px), on gère l'affichage du menu
+            if (window.innerWidth <= 768) {
+                menuButton.style.display = "block";  // Afficher le bouton burger
+                menu.classList.remove("open");  // S'assurer que le menu est fermé sur mobile
+                menuButton.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Empêche la propagation du clic
+                    toggleMenu(); // Ajouter ou enlever la classe "open"
+                }); // Ajouter un écouteur pour le clic sur le bouton burger
+
+                // Fermer le menu si on clique ailleurs
+                document.body.addEventListener('click', () => {
+                    if (menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                    }
+                });
+            } else {
+                menuButton.style.display = "none";  // Cacher le bouton burger sur les écrans plus grands
+                menu.classList.add("open"); // Afficher le menu sur les grands écrans
+            }
+        }
+
+        // Initialiser au chargement de la page
+        window.addEventListener('DOMContentLoaded', () => {
+            checkMenuBehavior();
+        });
+
+        // Ajouter un événement pour gérer le redimensionnement
+        window.addEventListener('resize', () => {
+            checkMenuBehavior();
+        });
+
     </script>
 </body>
 
